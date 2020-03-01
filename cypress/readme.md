@@ -4,9 +4,20 @@ This is with a set of [Cypress.io](https://www.cypress.io) E2E test. This test w
 
 ## Install and use
 
+
 ```shell
 npm install
+```
+
+for headless testing:
+```shell
 npm test
+```
+
+for opening up the cypress browser:
+npx is included with npm > v5.2 or can be installed separately.
+```shell
+npx cypress open
 ```
 
 ## Reporting
@@ -19,5 +30,3 @@ After the test have been run, an HTML report will be saved in `reports/mocharepo
 ToDo:
 - lint and format plugin
 - lint mocha format plugin
-- report plugin
-- screenshot
