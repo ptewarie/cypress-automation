@@ -8,6 +8,7 @@ cypress.env.json
 cypress/reports/*.json
 cypress/reports/mochareports/assets
 cypress/screenshots
+cypress/videos
 
 #misc
 launch.json
