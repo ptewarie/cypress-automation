@@ -24,7 +24,6 @@ npx cypress open
 
 After the test have been run, an HTML report will be saved in `reports/mochareports`. 
 
-
 ## Settings for mac
 
 ToDo:
