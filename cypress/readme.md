@@ -1,17 +1,20 @@
-> Example of cypress testing framework for Woolies
+> Example of cypress testing framework
 
-This is with a set of [Cypress.io](https://www.cypress.io) E2E test. This test will run a smoke test and the code coverage is saved automatically using [cypress-istanbul](https://github.com/cypress-io/cypress-istanbul) plugin.
+This is with a set of [Cypress.io](https://www.cypress.io) E2E test. This test will run a smoke test and the reports will be saved automatically using mochawesome, and mochareports
 
 ## Install and use
 
 ```shell
-npm install cypress
-npx cypress open
+npm install
+npm test
 ```
 
 ## Code coverage
 
-After the test have been run, an HTML report will be saved in `coverage`. 
+After the test have been run, an HTML report will be saved in `reports/mochareports`. 
+
+
+## Settings for mac
 
 ToDo:
 - lint and format plugin
