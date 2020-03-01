@@ -7,3 +7,6 @@ cypress.env.json
 #reports
 cypress/reports/.*json
 node_modules
+
+#misc
+launch.json
