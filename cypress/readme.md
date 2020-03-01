@@ -1,4 +1,4 @@
-> Example of cypress testing framework
+# Example of cypress testing framework
 
 This is with a set of [Cypress.io](https://www.cypress.io) E2E test. This test will run a smoke test and the reports will be saved automatically using mochawesome, and mochareports
 
@@ -9,7 +9,7 @@ npm install
 npm test
 ```
 
-## Code coverage
+## Reporting
 
 After the test have been run, an HTML report will be saved in `reports/mochareports`. 
 
