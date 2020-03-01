@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-03-01T22:47:52.025Z",
+    "end": "2020-03-01T22:48:23.908Z",
+    "duration": 31883,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b24a7df8-4da7-4f4f-9d54-81dfea12df32",
+      "title": "",
+      "fullFile": "cypress\\integration\\smoke\\printed-dress.spec.js",
+      "file": "cypress\\integration\\smoke\\printed-dress.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1da867d0-822c-44a9-ab9b-9eaf8def8614",
+          "title": "Smoke Test - Scenario: buy two products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Given I am on a shopping site",
+              "fullTitle": "Smoke Test - Scenario: buy two products Given I am on a shopping site",
+              "timedOut": null,
+              "duration": 6215,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_home[\"default\"].open();\n_home[\"default\"].navigationTabs.should('be.visible');",
+              "err": {},
+              "uuid": "fe052b35-c32d-4b25-8c29-107a140e255c",
+              "parentUUID": "1da867d0-822c-44a9-ab9b-9eaf8def8614",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "When I order 2 items",
+              "fullTitle": "Smoke Test - Scenario: buy two products When I order 2 items",
+              "timedOut": null,
+              "duration": 19197,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_home[\"default\"].addProductToCart(this.user.product);\n_home[\"default\"].assertTextElement(_home[\"default\"].shoppingCartTotalDropDown, this.user.productQuantity);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutSummaryButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutButton);\n_home[\"default\"].typeInEmail(Cypress.env('email'));\n_home[\"default\"].typeInPassword(Cypress.env('pw'));\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].submitButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].termCheckBox);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].payByBankWireButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutButton);",
+              "err": {},
+              "uuid": "b747395a-a40f-4b79-948d-c74b597c3baf",
+              "parentUUID": "1da867d0-822c-44a9-ab9b-9eaf8def8614",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Then the order details should be displayed on the confirmation page ",
+              "fullTitle": "Smoke Test - Scenario: buy two products Then the order details should be displayed on the confirmation page ",
+              "timedOut": null,
+              "duration": 97,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_home[\"default\"].completionMessage.should('have.text', this.user.completionMessage);\n_home[\"default\"].price.should('have.text', this.user.price);\n_home[\"default\"].otherDetails.should('have.text', this.user.otherDetails);\n_home[\"default\"].bankName.should('have.text', this.user.bankName);",
+              "err": {},
+              "uuid": "5a2ea073-610e-4376-b722-fac8314058fc",
+              "parentUUID": "1da867d0-822c-44a9-ab9b-9eaf8def8614",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "And I should be able to log out successfully",
+              "fullTitle": "Smoke Test - Scenario: buy two products And I should be able to log out successfully",
+              "timedOut": null,
+              "duration": 3178,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_home[\"default\"].clickOnVisibleElement(_home[\"default\"].logoutButton);\n_home[\"default\"].loginButton.should('be.visible');",
+              "err": {},
+              "uuid": "a50c6603-5ec8-4641-bde3-e0aeff7783e2",
+              "parentUUID": "1da867d0-822c-44a9-ab9b-9eaf8def8614",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fe052b35-c32d-4b25-8c29-107a140e255c",
+            "b747395a-a40f-4b79-948d-c74b597c3baf",
+            "5a2ea073-610e-4376-b722-fac8314058fc",
+            "a50c6603-5ec8-4641-bde3-e0aeff7783e2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28687,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
