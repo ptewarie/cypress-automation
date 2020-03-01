@@ -1,0 +1,9 @@
+# env variable contain personal email
+cypress.env.json
+
+#.logs 
+.*log
+
+#reports
+cypress/reports/.*json
+node_modules
