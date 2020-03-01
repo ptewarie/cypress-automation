@@ -5,8 +5,10 @@ cypress.env.json
 .*log
 
 #reports
-cypress/reports/.*json
-node_modules
+cypress/reports/*.json
+cypress/reports/mochareports/assets
+cypress/screenshots
 
 #misc
 launch.json
+node_modules
