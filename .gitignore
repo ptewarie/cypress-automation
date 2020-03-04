@@ -7,9 +7,12 @@
 #reports
 cypress/reports/*.json
 cypress/reports/mochareports/assets
+cypress/reports/mocha
 cypress/screenshots
 cypress/videos
 
+
 #misc
 launch.json
+.idea
 node_modules

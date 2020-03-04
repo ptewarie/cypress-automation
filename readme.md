@@ -28,5 +28,5 @@ npx cypress open
 ## Settings for mac
 for now assuming tests will be run on a windows laptop
 
-##ToDo:
+## ToDo:
 - parallel execution
