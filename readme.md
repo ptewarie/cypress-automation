@@ -26,10 +26,7 @@ npx cypress open
  After the test have been run, an HTML report will be saved in `reports/mochareports`. 
 
 ## Settings for mac
-### for now assuming tests will be run on a windows laptop
+for now assuming tests will be run on a windows laptop
 
-ToDo:
-- lint and format plugin
-- lint mocha format plugin
-- add screenshot to report when failing
+##ToDo:
 - parallel execution

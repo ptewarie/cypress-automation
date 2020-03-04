@@ -1,5 +1,5 @@
-# env variable contain personal email
-cypress.env.json
+# env variable contain test email
+# cypress.env.json - this should commented out for testing purposes only
 
 #.logs 
 .*log
