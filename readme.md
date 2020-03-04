@@ -1,6 +1,6 @@
 # Example of cypress testing framework
 
-This is with a set of [Cypress.io](https://www.cypress.io) E2E tests. This test will run some smoke tests and the reports will be saved automatically using mochawesome, and mochareports
+This is a set of [Cypress.io](https://www.cypress.io) E2E tests. This test will run some smoke tests and the reports will be saved automatically using mochawesome, and mochareports
 
 ## Install and use
 
@@ -26,8 +26,10 @@ npx cypress open
  After the test have been run, an HTML report will be saved in `reports/mochareports`. 
 
 ## Settings for mac
-toDo
+### for now assuming tests will be run on a windows laptop
 
 ToDo:
 - lint and format plugin
 - lint mocha format plugin
+- add screenshot to report when failing
+- parallel execution
