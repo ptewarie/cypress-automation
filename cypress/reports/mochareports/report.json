@@ -1,0 +1,436 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 12,
+    "passes": 2,
+    "pending": 0,
+    "failures": 10,
+    "start": "2020-03-16T11:40:09.567Z",
+    "end": "2020-03-16T11:40:09.567Z",
+    "duration": 124567,
+    "testsRegistered": 12,
+    "passPercent": 16.666666666666668,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a5e7bd3e-ce1d-4ed9-b21a-ea4ae6ba0a45",
+      "title": "",
+      "fullFile": "cypress\\integration\\smoke\\printed-dress.spec.js",
+      "file": "cypress\\integration\\smoke\\printed-dress.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "287f6889-225f-4aeb-a867-08bb0edd1305",
+          "title": "Smoke Test - Scenario: buy two products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Given I am on a shopping site",
+              "fullTitle": "Smoke Test - Scenario: buy two products Given I am on a shopping site",
+              "timedOut": null,
+              "duration": 13328,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_home[\"default\"].open();\n_home[\"default\"].navigationTabs.should('be.visible');",
+              "err": {
+                "message": "CypressError: cy.visit() failed trying to load:\n\nhttp://automationpractice.com/index.php\n\nThe response we received from your web server was:\n\n  > 500: Server Error\n\nThis was considered a failure because the status code was not '2xx'.\n\nIf you do not want status codes to cause failures pass the option: 'failOnStatusCode: false'",
+                "estack": "CypressError: cy.visit() failed trying to load:\n\nhttp://automationpractice.com/index.php\n\nThe response we received from your web server was:\n\n  > 500: Server Error\n\nThis was considered a failure because the status code was not '2xx'.\n\nIf you do not want status codes to cause failures pass the option: 'failOnStatusCode: false'\n    at cypressErr (http://localhost:53446/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:53446/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:53446/__cypress/runner/cypress_runner.js:149915:3)\n    at http://localhost:53446/__cypress/runner/cypress_runner.js:138814:34\n    at visitFailedByErr (http://localhost:53446/__cypress/runner/cypress_runner.js:138327:12)\n    at http://localhost:53446/__cypress/runner/cypress_runner.js:138795:22\n    at tryCatcher (http://localhost:53446/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:53446/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:53446/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:53446/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:53446/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:53446/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:53446/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:53446/__cypress/runner/cypress_runner.js:162024:14)",
+                "diff": null
+              },
+              "uuid": "7411a2e7-8519-4411-82b7-5a6a3f8c6488",
+              "parentUUID": "287f6889-225f-4aeb-a867-08bb0edd1305",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "When I order 2 items",
+              "fullTitle": "Smoke Test - Scenario: buy two products When I order 2 items",
+              "timedOut": null,
+              "duration": 4651,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_home[\"default\"].addProductToCart(this.user.product);\n_home[\"default\"].assertTextElement(_home[\"default\"].shoppingCartTotalDropDown, this.user.productQuantity);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutSummaryButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutButton);\n_home[\"default\"].typeInEmail(Cypress.env('email'));\n_home[\"default\"].typeInPassword(Cypress.env('pw'));\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].submitButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].termCheckBox);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].payByBankWireButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutButton);",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find content: 'Printed Dress' but never did.",
+                "estack": "CypressError: Timed out retrying: Expected to find content: 'Printed Dress' but never did.\n    at cypressErr (http://localhost:53446/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:53446/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:53446/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:53446/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:53446/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:53446/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:53446/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:53446/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:53446/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:53446/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:53446/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:53446/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:53446/__cypress/runner/cypress_runner.js:162024:14)",
+                "diff": null
+              },
+              "uuid": "a7f4f621-afd4-44b1-9f1c-313b63c66347",
+              "parentUUID": "287f6889-225f-4aeb-a867-08bb0edd1305",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Then the order details should be displayed on the confirmation page ",
+              "fullTitle": "Smoke Test - Scenario: buy two products Then the order details should be displayed on the confirmation page ",
+              "timedOut": null,
+              "duration": 4635,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_home[\"default\"].completionMessage.should('have.text', this.user.completionMessage);\n_home[\"default\"].price.should('have.text', this.user.price);\n_home[\"default\"].otherDetails.should('have.text', this.user.otherDetails);\n_home[\"default\"].bankName.should('have.text', this.user.bankName);",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '.cheque-indent > .dark', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '.cheque-indent > .dark', but never found it.\n    at cypressErr (http://localhost:53446/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:53446/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:53446/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:53446/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:53446/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:53446/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:53446/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:53446/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:53446/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:53446/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:53446/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:53446/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:53446/__cypress/runner/cypress_runner.js:162024:14)",
+                "diff": null
+              },
+              "uuid": "83356c77-16af-4787-a018-ec37498ec9e1",
+              "parentUUID": "287f6889-225f-4aeb-a867-08bb0edd1305",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "And I should be able to log out successfully",
+              "fullTitle": "Smoke Test - Scenario: buy two products And I should be able to log out successfully",
+              "timedOut": null,
+              "duration": 4535,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_home[\"default\"].clickOnVisibleElement(_home[\"default\"].logoutButton);\n_home[\"default\"].loginButton.should('be.visible');",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '.logout', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '.logout', but never found it.\n    at cypressErr (http://localhost:53446/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://localhost:53446/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://localhost:53446/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://localhost:53446/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://localhost:53446/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://localhost:53446/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://localhost:53446/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://localhost:53446/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://localhost:53446/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://localhost:53446/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:53446/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:53446/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://localhost:53446/__cypress/runner/cypress_runner.js:162024:14)",
+                "diff": null
+              },
+              "uuid": "a51f3fa7-845f-43df-8190-ab3c46881c87",
+              "parentUUID": "287f6889-225f-4aeb-a867-08bb0edd1305",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "7411a2e7-8519-4411-82b7-5a6a3f8c6488",
+            "a7f4f621-afd4-44b1-9f1c-313b63c66347",
+            "83356c77-16af-4787-a018-ec37498ec9e1",
+            "a51f3fa7-845f-43df-8190-ab3c46881c87"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 27149,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "16c21de7-8fcf-4f40-8f0a-0e202fde308b",
+      "title": "",
+      "fullFile": "cypress\\integration\\smoke\\printed-summer-dress.spec.js",
+      "file": "cypress\\integration\\smoke\\printed-summer-dress.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ad3a2cae-6b67-45f9-b6f1-4dfd412a3ccf",
+          "title": "Smoke Test - Scenario: buy two products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Given I am on a shopping site",
+              "fullTitle": "Smoke Test - Scenario: buy two products Given I am on a shopping site",
+              "timedOut": null,
+              "duration": 24686,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_home[\"default\"].open();\n_home[\"default\"].navigationTabs.should('be.visible');",
+              "err": {},
+              "uuid": "30d69b22-d1fa-43bb-8ff0-ad765c2fc5a2",
+              "parentUUID": "ad3a2cae-6b67-45f9-b6f1-4dfd412a3ccf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "When I order 2 items",
+              "fullTitle": "Smoke Test - Scenario: buy two products When I order 2 items",
+              "timedOut": null,
+              "duration": 22817,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_home[\"default\"].addProductToCart(this.user.product);\n_home[\"default\"].assertTextElement(_home[\"default\"].shoppingCartTotalDropDown, this.user.productQuantity);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutSummaryButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutButton);\n_home[\"default\"].typeInEmail(Cypress.env('email'));\n_home[\"default\"].typeInPassword(Cypress.env('pw'));\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].submitButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].termCheckBox);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].payByBankWireButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutButton);",
+              "err": {
+                "message": "CypressError: Timed out retrying: expected '<span.ajax_cart_quantity.unvisible>' to have text '2', but the text was '0'",
+                "estack": "CypressError: Timed out retrying: expected '<span.ajax_cart_quantity.unvisible>' to have text '2', but the text was '0'\n    at cypressErr (http://automationpractice.com/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://automationpractice.com/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://automationpractice.com/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://automationpractice.com/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://automationpractice.com/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://automationpractice.com/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://automationpractice.com/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://automationpractice.com/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://automationpractice.com/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://automationpractice.com/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://automationpractice.com/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:162024:14)",
+                "diff": null
+              },
+              "uuid": "6634e905-9e3a-4cd3-b561-ffd0fc500783",
+              "parentUUID": "ad3a2cae-6b67-45f9-b6f1-4dfd412a3ccf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Then the order details should be displayed on the confirmation page ",
+              "fullTitle": "Smoke Test - Scenario: buy two products Then the order details should be displayed on the confirmation page ",
+              "timedOut": null,
+              "duration": 4881,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_home[\"default\"].completionMessage.should('have.text', this.user.completionMessage);\n_home[\"default\"].price.should('have.text', this.user.price);\n_home[\"default\"].otherDetails.should('have.text', this.user.otherDetails);\n_home[\"default\"].bankName.should('have.text', this.user.bankName);",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '.cheque-indent > .dark', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '.cheque-indent > .dark', but never found it.\n    at cypressErr (http://automationpractice.com/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://automationpractice.com/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://automationpractice.com/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://automationpractice.com/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://automationpractice.com/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://automationpractice.com/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://automationpractice.com/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://automationpractice.com/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://automationpractice.com/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://automationpractice.com/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://automationpractice.com/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:162024:14)",
+                "diff": null
+              },
+              "uuid": "48711337-a423-4af5-860f-146929d265de",
+              "parentUUID": "ad3a2cae-6b67-45f9-b6f1-4dfd412a3ccf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "And I should be able to log out successfully",
+              "fullTitle": "Smoke Test - Scenario: buy two products And I should be able to log out successfully",
+              "timedOut": null,
+              "duration": 4815,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_home[\"default\"].clickOnVisibleElement(_home[\"default\"].logoutButton);\n_home[\"default\"].loginButton.should('be.visible');",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '.logout', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '.logout', but never found it.\n    at cypressErr (http://automationpractice.com/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://automationpractice.com/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://automationpractice.com/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://automationpractice.com/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://automationpractice.com/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://automationpractice.com/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://automationpractice.com/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://automationpractice.com/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://automationpractice.com/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://automationpractice.com/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://automationpractice.com/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:162024:14)",
+                "diff": null
+              },
+              "uuid": "18f6e7c5-43dd-4f26-9005-c372781b104a",
+              "parentUUID": "ad3a2cae-6b67-45f9-b6f1-4dfd412a3ccf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "30d69b22-d1fa-43bb-8ff0-ad765c2fc5a2"
+          ],
+          "failures": [
+            "6634e905-9e3a-4cd3-b561-ffd0fc500783",
+            "48711337-a423-4af5-860f-146929d265de",
+            "18f6e7c5-43dd-4f26-9005-c372781b104a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 57199,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "b08ff17d-07c1-4f7d-a7f1-30df868d4237",
+      "title": "",
+      "fullFile": "cypress\\integration\\smoke\\faded-sleeve.spec.js",
+      "file": "cypress\\integration\\smoke\\faded-sleeve.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d6aa43f5-4190-4591-b201-218fa6331cd7",
+          "title": "Smoke Test - Scenario: buy two products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Given I am on a shopping site",
+              "fullTitle": "Smoke Test - Scenario: buy two products Given I am on a shopping site",
+              "timedOut": null,
+              "duration": 20732,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_home[\"default\"].open();\n_home[\"default\"].navigationTabs.should('be.visible');",
+              "err": {},
+              "uuid": "cf03a72b-9de9-48e3-b72f-b75882d7deb2",
+              "parentUUID": "d6aa43f5-4190-4591-b201-218fa6331cd7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "When I order 2 items",
+              "fullTitle": "Smoke Test - Scenario: buy two products When I order 2 items",
+              "timedOut": null,
+              "duration": 10537,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_home[\"default\"].addProductToCart(this.user.product);\n_home[\"default\"].assertTextElement(_home[\"default\"].shoppingCartTotalDropDown, this.user.productQuantity);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutSummaryButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutButton);\n_home[\"default\"].typeInEmail(Cypress.env('email'));\n_home[\"default\"].typeInPassword(Cypress.env('pw'));\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].submitButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].termCheckBox);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].payByBankWireButton);\n_home[\"default\"].clickOnVisibleElement(_home[\"default\"].proceedToCheckOutButton);",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '.icon-plus', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '.icon-plus', but never found it.\n    at cypressErr (http://automationpractice.com/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://automationpractice.com/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://automationpractice.com/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://automationpractice.com/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://automationpractice.com/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://automationpractice.com/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://automationpractice.com/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://automationpractice.com/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://automationpractice.com/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://automationpractice.com/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://automationpractice.com/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:162024:14)",
+                "diff": null
+              },
+              "uuid": "3dcc8fc6-685a-409a-8282-ac7833026cd0",
+              "parentUUID": "d6aa43f5-4190-4591-b201-218fa6331cd7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Then the order details should be displayed on the confirmation page ",
+              "fullTitle": "Smoke Test - Scenario: buy two products Then the order details should be displayed on the confirmation page ",
+              "timedOut": null,
+              "duration": 4492,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_home[\"default\"].completionMessage.should('have.text', this.user.completionMessage);\n_home[\"default\"].price.should('have.text', this.user.price);\n_home[\"default\"].otherDetails.should('have.text', this.user.otherDetails);\n_home[\"default\"].bankName.should('have.text', this.user.bankName);",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '.cheque-indent > .dark', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '.cheque-indent > .dark', but never found it.\n    at cypressErr (http://automationpractice.com/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://automationpractice.com/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://automationpractice.com/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://automationpractice.com/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://automationpractice.com/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://automationpractice.com/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://automationpractice.com/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://automationpractice.com/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://automationpractice.com/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://automationpractice.com/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://automationpractice.com/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:162024:14)",
+                "diff": null
+              },
+              "uuid": "f3a50cc9-74b4-495c-86fc-84c2429904fb",
+              "parentUUID": "d6aa43f5-4190-4591-b201-218fa6331cd7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "And I should be able to log out successfully",
+              "fullTitle": "Smoke Test - Scenario: buy two products And I should be able to log out successfully",
+              "timedOut": null,
+              "duration": 4458,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_home[\"default\"].clickOnVisibleElement(_home[\"default\"].logoutButton);\n_home[\"default\"].loginButton.should('be.visible');",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '.logout', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '.logout', but never found it.\n    at cypressErr (http://automationpractice.com/__cypress/runner/cypress_runner.js:149934:9)\n    at throwErr (http://automationpractice.com/__cypress/runner/cypress_runner.js:149867:11)\n    at Object.throwErrByPath (http://automationpractice.com/__cypress/runner/cypress_runner.js:149915:3)\n    at retry (http://automationpractice.com/__cypress/runner/cypress_runner.js:144197:19)\n    at onFailFn (http://automationpractice.com/__cypress/runner/cypress_runner.js:132448:16)\n    at tryCatcher (http://automationpractice.com/__cypress/runner/cypress_runner.js:167415:23)\n    at Promise._settlePromiseFromHandler (http://automationpractice.com/__cypress/runner/cypress_runner.js:165351:31)\n    at Promise._settlePromise (http://automationpractice.com/__cypress/runner/cypress_runner.js:165408:18)\n    at Promise._settlePromise0 (http://automationpractice.com/__cypress/runner/cypress_runner.js:165453:10)\n    at Promise._settlePromises (http://automationpractice.com/__cypress/runner/cypress_runner.js:165528:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://automationpractice.com/__cypress/runner/cypress_runner.js:162140:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:162150:10)\n    at Async.drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:162024:14)",
+                "diff": null
+              },
+              "uuid": "b8457da3-4ff7-4303-8aa0-7af0ce5c4a17",
+              "parentUUID": "d6aa43f5-4190-4591-b201-218fa6331cd7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cf03a72b-9de9-48e3-b72f-b75882d7deb2"
+          ],
+          "failures": [
+            "3dcc8fc6-685a-409a-8282-ac7833026cd0",
+            "f3a50cc9-74b4-495c-86fc-84c2429904fb",
+            "b8457da3-4ff7-4303-8aa0-7af0ce5c4a17"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 40219,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
